@@ -1,0 +1,20 @@
+/* CONTACT */
+.contact {
+  background: var(--white-cloud);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+input, textarea {
+  padding: 0.7rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--sky3);
+}
