@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -7,23 +7,104 @@
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <section id = "contact" class = "contact">
-        <h3>Contact Me</h3>
-      <p>Want to say hello? Send me a message! 💌</p>
 
-      <form id="contact-form">
-        <label for="name">Name</label>
-        <input id="name" type="text" required>
+<header id="hero">
+    <!-- VIDEO BACKGROUND -->
+    <video autoplay loop muted id="video-background">
+        <source src="images/rit.mp4" type="video/mp4">
+    </video>
 
-        <label for="email">Email</label>
-        <input id="email" type="email" required>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Ritika Shrestha</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" required></textarea>
+    <!-- HERO TEXT -->
+    <div class="hero-content">
+        <h1>Hello, I'm Ritika</h1>
+        <p>Frontend Developer</p>
+    </div>
+</header>
 
-        <button type="submit" class="btn">Send ✨</button>
-      </form>
-    </section>
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a frontend developer passionate about building clean, responsive, and user-friendly websites.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="images/project1.png" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>A responsive website built using HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="images/project2.png" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>An interactive JavaScript dashboard UI.</p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img src="images/project3.png" alt="Project 3">
+            <h3>Project 3</h3>
+            <p>A modern layout created using Flexbox and Grid.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+    <div id="notification" class="notification">Message Sent!</div>
+</section>
+
+<!-- JS Notification -->
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const n = document.getElementById("notification");
+        n.style.display = "block";
+        setTimeout(() => { n.style.display = "none"; }, 3000);
+    });
+</script>
+
 </body>
 </html>
